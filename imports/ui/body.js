@@ -14,8 +14,8 @@ Template.body.helpers({
 Template.body.events({
 	'submit .new-task'(event){
 		event.preventDefault();
-		const target= events.target;
-		const text=target.text.value();
+		const target= event.target;
+		const text=target.text.value;
 		Tasks.insert({
 			text,
 			createdAt: new Date(),
